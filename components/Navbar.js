@@ -248,7 +248,10 @@ const Navbar = () => {
                             {Array(5)
                               .fill(null)
                               .map((item, i) => (
-                                <>
+                                <div
+                                  key={i}
+                                  className="flex flex-col justify-center mt-2 font-thin"
+                                >
                                   <Link
                                     href="#"
                                     className={`hover:text-th-green px-2 py-[5px] ${
@@ -257,7 +260,7 @@ const Navbar = () => {
                                   >
                                     <span>{i + 1}. Resident Evil</span>
                                   </Link>
-                                </>
+                                </div>
                               ))}
                           </div>
                         </div>
@@ -310,7 +313,7 @@ const Navbar = () => {
             </ul>
             {/* navbar button desktop */}
             <div className="hidden md:flex gap-5">
-              <button className="text-lg rounded-md  text-white border py-[2px] px-[15px] flex gap-[5px] items-center">
+              <button className="text-lg rounded-md  text-white border py-[2px] px-[15px] flex gap-[5px] items-center hover:border-th-green hover:text-th-green">
                 <ImDownload3 className="text-md" />
                 <span>APP</span>
               </button>
@@ -382,7 +385,7 @@ const Navbar = () => {
               .fill(null)
               .map((item, index) => (
                 <li
-                  key={index + 1}
+                  key={index}
                   className="flex gap-[10px] items-center hover:bg-th-gray/30  hover:text-th-green"
                 >
                   <div
